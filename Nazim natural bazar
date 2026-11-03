@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nazim Natural Bazar</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--header:#14452a;--forest:#0f2f1c;--green:#2a7a48;--cream:#fbf3dc;--page:#fffaf0;--card:#fff;--gold:#c8870f;--goldbg:#f2b73c;--text:#1d2b21;--muted:#5d6b61;--leaf:#dfe9c3;--line:#e5dcc0;--btn:#14452a;--h:#14452a}
+:root{color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--text);font-family:'Hind Siliguri',system-ui,sans-serif;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--header);z-index:30}
+h1,h2,h3{font-family:'Tiro Bangla',Georgia,serif;font-weight:400;margin:0}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{background:var(--header);color:#fff;position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+.nav{display:flex;align-items:center;gap:22px;height:62px}
+.logo{font-family:'Tiro Bangla',serif;font-size:1.25rem;font-style:italic}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0 auto;padding:0}
+.nav ul a:hover{color:#f2c75c}
+.cart{background:none;border:1px solid #3f8a5a;color:#fff;border-radius:99px;padding:5px 14px;cursor:pointer;font:inherit}
+.hero{background:var(--cream);position:relative;overflow:hidden;padding:56px 0 90px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:20px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.5vw,4.8rem);line-height:1.12;color:var(--h)}
+.hero h1 em{display:block;font-size:.42em;color:var(--green);margin-top:10px;font-style:italic}
+.hero p{max-width:28em;font-size:1.1rem}
+.btn{display:inline-block;background:var(--header);color:#fff;padding:13px 30px;border-radius:99px;font-weight:700;border:2px solid var(--goldbg)}
+.btn:hover{background:var(--green)}
+.sun{position:relative;aspect-ratio:1;max-width:420px;margin:auto;width:100%}
+.sun svg{position:absolute;inset:0;width:100%;height:100%}
+.sun span{position:absolute;inset:0;display:grid;place-items:center;font-size:clamp(5rem,14vw,9rem);filter:drop-shadow(0 10px 10px rgba(80,50,0,.3))}
+.rib{background:var(--header);color:#f6e7b4;overflow:hidden;white-space:nowrap;padding:10px 0;font-weight:500}
+.rib div{display:inline-block;padding-left:100%;animation:m 28s linear infinite}
+@keyframes m{to{transform:translateX(-100%)}}
+@media (prefers-reduced-motion:reduce){.rib div{animation:none;padding:0 20px}}
+.sec{padding:60px 0 10px}
+.sec h2{font-size:2.2rem;color:var(--h)}
+.sec>p{color:var(--muted);margin:4px 0 36px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px 14px 10px 10px;padding:12px 12px 16px;position:relative}
+.card:nth-child(even){margin-top:28px}
+.arch{background:var(--leaf);border-radius:999px 999px 10px 10px;height:170px;display:grid;place-items:center;font-size:4.2rem}
+.stamp{position:absolute;right:6px;top:128px;background:var(--goldbg);color:#3a2500;border-radius:50%;width:70px;height:70px;display:grid;place-items:center;text-align:center;font-weight:700;line-height:1.1;transform:rotate(-8deg);border:2px dashed #3a2500}
+.stamp s{font-size:.7rem;font-weight:400;display:block}
+.card h3{font-size:1.25rem;margin:14px 0 8px;color:var(--text)}
+.price{color:var(--gold);font-weight:700;font-size:1.2rem}
+.card button{margin-top:8px;width:100%;background:var(--btn);color:#fff;border:0;border-radius:8px;padding:9px;font:600 1rem inherit;font-family:inherit;cursor:pointer}
+.hexes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0 50px}
+.hx{background:var(--leaf);clip-path:polygon(25% 4%,75% 4%,100% 50%,75% 96%,25% 96%,0 50%);aspect-ratio:1.15;display:grid;place-items:center;text-align:center;padding:16px;font-weight:600}
+.hx i{font-style:normal;font-size:2rem;display:block}
+.say{display:grid;grid-template-columns:1fr 1.3fr;gap:30px;align-items:center;padding:20px 0 60px}
+.say blockquote{margin:0;font-family:'Tiro Bangla',serif;font-size:1.5rem;line-height:1.5;border-left:5px solid var(--goldbg);padding-left:20px;min-height:7em}
+.say small{display:block;margin-top:10px;font-family:'Hind Siliguri';font-size:.95rem;color:var(--muted)}
+.say button{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:99px;padding:6px 16px;cursor:pointer;margin-right:6px;font:inherit}
+footer{background:var(--forest);color:#e8efe2;padding:40px 0 0}
+.fg{display:grid;grid-template-columns:1.2fr 1fr 1.3fr 1.2fr;gap:24px}
+footer h4{margin:0 0 8px;color:#f2c75c;font-family:'Tiro Bangla',serif;font-weight:400;font-size:1.15rem}
+footer p{margin:4px 0}
+.wa{display:inline-block;background:var(--header);border:2px solid #3f8a5a;color:#fff;padding:12px 22px;border-radius:99px;font-weight:700}
+.wa:hover{background:#1c5a37}
+.copy{border-top:1px solid #24472f;margin-top:26px;padding:14px 0;font-size:.9rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--header);color:#fff;padding:10px 18px;border-radius:30px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:40}
+.toast.show{opacity:1}
+:focus-visible{outline:3px solid var(--goldbg);outline-offset:2px}
+.toast{bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+.ov{position:fixed;inset:0;background:rgba(15,47,28,.35);opacity:0;pointer-events:none;transition:opacity .2s;z-index:50}
+.ov.on{opacity:1;pointer-events:auto}
+.dr{position:fixed;top:0;right:0;bottom:0;width:min(380px,100%);background:#fffaf0;color:#1d2b21;z-index:60;transform:translateX(100%);transition:transform .25s;padding:calc(16px + env(safe-area-inset-top,0px)) 18px 16px;overflow:auto;display:flex;flex-direction:column;gap:10px}
+.dr.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center}
+.dh button{background:none;border:0;font-size:1.3rem;cursor:pointer}
+.it{display:flex;justify-content:space-between;align-items:center;gap:8px;border-bottom:1px solid var(--line);padding:8px 0}
+.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer}
+.tot{font-size:1.2rem;display:flex;justify-content:space-between}
+.dr input,.dr textarea{border:1px solid var(--line);border-radius:8px;padding:10px;font:inherit;background:#fff;color:#1d2b21}
+.wa.big{text-align:center;border-radius:12px}
+.wa.disabled{opacity:.5;pointer-events:none}
+.bar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));background:var(--header);color:#fff;border:2px solid var(--goldbg);border-radius:99px;padding:12px 24px;font:700 1rem 'Hind Siliguri',sans-serif;cursor:pointer;z-index:35;display:none;box-shadow:0 6px 20px rgba(0,0,0,.25);white-space:nowrap}
+.bar.on{display:block}
+.wfloat{position:fixed;right:14px;bottom:calc(76px + env(safe-area-inset-bottom,0px));background:var(--header);color:#fff;border:2px solid #3f8a5a;border-radius:99px;padding:11px 18px;font-weight:700;z-index:34;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.wfloat:hover{background:#1c5a37}
+@media(max-width:820px){.nav ul{display:none}.nav{justify-content:space-between}.hero .wrap,.say{grid-template-columns:1fr}.grid,.hexes{grid-template-columns:1fr 1fr}.card:nth-child(even){margin-top:0}.fg{grid-template-columns:1fr 1fr}.stamp{top:120px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="logo" href="#top">🌿 Nazim Natural Bazar</a>
+<ul><li><a href="#top">Home</a></li><li><a href="#products">Products</a></li><li><a href="#why">About Us</a></li><li><a href="#say">Reviews</a></li><li><a href="#contact">Contact</a></li></ul>
+<button class="cart" id="cartbtn" aria-label="Cart">🛒 <span id="count">0</span></button></div></header>
+
+<section class="hero" id="top"><div class="wrap">
+<div><h1>প্রকৃতির খাঁটি স্বাদ, <br>আপনার ঘরে<em>Nazim Natural Bazar · 100% Organic &amp; Pure</em></h1>
+<p>খাঁটি মধু, কালোজিরার তেল এবং প্রাকৃতিক পণ্য এখন আপনার হাতের নাগালে।</p>
+<a class="btn" href="#products">Shop Now</a></div>
+<div class="sun" aria-hidden="true"><svg viewBox="0 0 400 400"><path fill="#f2b73c" d="M200 20c70 0 160 40 170 130 8 60-20 90-20 140 0 40-30 90-70 80-30-8-20-50-50-50s-20 60-60 60-40-60-70-55c-40 6-60-30-60-70 0-50-30-80-20-140C-10 60 130 20 200 20z"/><circle cx="200" cy="190" r="120" fill="#fbf3dc" opacity=".55"/></svg><span>🍯</span></div>
+</div></section>
+<div class="rib"><div>🍃 100% Natural, No Chemicals &nbsp;•&nbsp; 🛡️ Pure &amp; Safe &nbsp;•&nbsp; 🚚 Fast Delivery Across Bangladesh &nbsp;•&nbsp; 🎧 24/7 Support</div></div>
+
+<div class="wrap">
+<section class="sec" id="products"><h2>আমাদের জনপ্রিয় পণ্য</h2><p>Discover the best of nature</p><div class="grid" id="grid"></div></section>
+<section class="sec" id="why"><h2>কেন Nazim Natural Bazar?</h2><p>Your Health, Our Priority</p>
+<div class="hexes"><div class="hx"><div><i>🌱</i>Pure &amp; Organic</div></div><div class="hx"><div><i>💎</i>Premium Quality</div></div><div class="hx"><div><i>🤝</i>Trusted by Thousands</div></div><div class="hx"><div><i>💚</i>Better Health Naturally</div></div></div></section>
+<section class="say" id="say"><div><h2 style="font-size:2.2rem;color:var(--h)">গ্রাহকরা কী বলছেন</h2><p style="color:var(--muted)">★★★★★</p><button id="prev" aria-label="Previous">←</button><button id="next" aria-label="Next">→</button></div>
+<blockquote id="q"></blockquote></section>
+</div>
+
+<footer id="contact"><div class="wrap"><div class="fg">
+<div><h4>🌿 Nazim Natural Bazar</h4><p><i>Natural Beauty, Healthy Life</i></p></div>
+<div><h4>Quick Links</h4><p><a href="#top">Home</a></p><p><a href="#products">Products</a></p><p><a href="#why">About Us</a></p></div>
+<div><h4>Contact</h4><p>📞 01660038937</p><p>✉️ nazimnaturalbazar@gmail.com</p><p>📍 Dhaka, Bangladesh</p></div>
+<div><h4>Follow Us</h4><p>Facebook · YouTube · Instagram</p><p style="margin-top:12px"><a class="wa" target="_blank" rel="noopener" href="https://wa.me/8801660038937">Order on WhatsApp</a></p></div>
+</div><div class="copy"><span>© 2025 Nazim Natural Bazar. All Rights Reserved.</span><span>Go Natural • Live Healthy</span></div></div></footer>
+<div class="ov" id="ov"></div>
+<aside class="dr" id="dr" aria-label="Cart"><div class="dh"><h3>আপনার কার্ট</h3><button id="x" aria-label="Close">✕</button></div><div id="items"></div><div class="tot"><span>মোট:</span><b id="tot">৳0</b></div><input id="nm" placeholder="আপনার নাম"><textarea id="ad" rows="2" placeholder="ডেলিভারি ঠিকানা"></textarea><button id="cp" type="button" style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;font:inherit;cursor:pointer;color:#1d2b21">📋 অর্ডার মেসেজ কপি করুন</button><textarea id="out" readonly rows="6" style="display:none"></textarea><a class="wa big disabled" id="send" target="_blank" rel="noopener" href="#">WhatsApp-এ অর্ডার পাঠান</a></aside>
+<button class="bar" id="bar"></button>
+<a class="wfloat" href="https://wa.me/8801660038937?text=Hello%20Nazim%20Natural%20Bazar%2C%20ami%20order%20korte%20chai." target="_blank" rel="noopener">💬 WhatsApp</a>
+<div class="toast" id="toast"></div>
+<script>
+const P=[{n:"খাঁটি মধু",e:"🍯",o:850,p:650},{n:"কালোজিরার তেল",e:"🫙",o:650,p:450},{n:"হারবাল গুঁড়া",e:"🌿",o:400,p:300},{n:"প্রাকৃতিক ভেষজ",e:"🌰",o:500,p:380}];
+const R=[["Nazim Natural Bazar থেকে মধু কিনেছি, সত্যিই খুব ভালো। খাঁটি পণ্য পেয়ে আমি অনেক খুশি।","Rahim Hasan, Dhaka"],["কালোজিরার তেলের মান দারুণ। ডেলিভারিও খুব দ্রুত পেয়েছি।","Sumaiya Akter, Chattogram"],["দাম ঠিক আছে আর পণ্য একদম আসল। আবার অর্ডার করব।","Karim Uddin, Sylhet"]];
+let c=0,i=0;const $=id=>document.getElementById(id);
+$("grid").innerHTML=P.map((x,k)=>`<div class="card"><div class="arch">${x.e}</div><div class="stamp"><div><s>ছাড়</s>৳${x.o-x.p}</div></div><h3>${x.n}</h3><div class="price"><s style="color:var(--muted);font-weight:400;font-size:.95rem">৳${x.o}</s> ৳${x.p}</div><button data-k="${k}">Add to Cart</button></div>`).join("");
+const Q={},NUM="8801660038937";
+const ks=()=>Object.keys(Q).filter(k=>Q[k]>0);
+function op(v){$("ov").classList.toggle("on",v);$("dr").classList.toggle("on",v)}
+function draw(){let n=0,t=0;const a=ks();
+$("items").innerHTML=a.length?a.map(k=>{const x=P[k],q=Q[k];n+=q;t+=q*x.p;return `<div class="it"><span>${x.e} ${x.n}<br><small>৳${x.p}</small></span><span class="qty"><button data-m="${k}">−</button> ${q} <button data-p="${k}">+</button></span></div>`}).join(""):"<p>কার্ট খালি। পণ্য বেছে নিন।</p>";
+$("count").textContent=n;$("tot").textContent="৳"+t;
+$("bar").textContent=`🛒 ${n} টি পণ্য · ৳${t} — অর্ডার করুন`;$("bar").classList.toggle("on",n>0);
+$("send").classList.toggle("disabled",!n)}
+$("grid").onclick=e=>{const b=e.target.closest("button");if(!b)return;const k=b.dataset.k;Q[k]=(Q[k]||0)+1;draw();const t=$("toast");t.textContent=P[k].n+" কার্টে যোগ হয়েছে";t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1400)};
+$("items").onclick=e=>{const b=e.target.closest("button");if(!b)return;const k=b.dataset.p||b.dataset.m;Q[k]+=b.dataset.p?1:-1;draw()};
+$("cartbtn").onclick=$("bar").onclick=()=>op(true);$("x").onclick=$("ov").onclick=()=>op(false);
+$("send").onclick=()=>{let t=0;const l=ks().map(k=>{t+=Q[k]*P[k].p;return `• ${P[k].n} × ${Q[k]} = ৳${Q[k]*P[k].p}`});
+const m=`আসসালামু আলাইকুম, আমি অর্ডার করতে চাই:\n${l.join("\n")}\nমোট: ৳${t}\nনাম: ${$("nm").value}\nঠিকানা: ${$("ad").value}`;
+$("send").href="https://wa.me/"+NUM+"?text="+encodeURIComponent(m)};
+$("cp").onclick=()=>{$("send").onclick();const m=decodeURIComponent($("send").href.split("?text=")[1]||"");const o=$("out");o.value=m;o.style.display="block";o.select();const t=$("toast");const ok=()=>{t.textContent="কপি হয়েছে। WhatsApp-এ 01660038937-এ পেস্ট করুন";t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2500)};try{navigator.clipboard.writeText(m).then(ok,()=>{})}catch(e){}};
+draw();
+function s(n){i=(n+R.length)%R.length;$("q").innerHTML=`“${R[i][0]}”<small>— ${R[i][1]}</small>`}
+$("prev").onclick=()=>s(i-1);$("next").onclick=()=>s(i+1);s(0);
+</script>
+</body>
+</html>
